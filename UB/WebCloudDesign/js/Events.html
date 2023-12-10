@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Event</h1>
+
+    <button id="clickButton">Click Me</button>
+
+    <p id="clickOutput"></p>
+
+    <div id="mouseDiv" style="width: 200px; height: 100px; background-color: lightblue;">
+        Hover over me!
+    </div>
+
+    <input type="text" id="textInput" placeholder="Type something">
+
+    <form id="exampleForm">
+        <button type="submit">Submit Form</button>
+    </form>
+
+    <script>
+        document.getElementById('clickButton').addEventListener('click', function() {
+            document.getElementById('clickOutput').innerText = 'Button Clicked!';
+        });
+
+        var mouseDiv = document.getElementById('mouseDiv');
+        mouseDiv.addEventListener('mouseover', function() {
+            mouseDiv.style.backgroundColor = 'lightcoral';
+        });
+        mouseDiv.addEventListener('mouseout', function() {
+            mouseDiv.style.backgroundColor = 'lightblue';
+        });
+
+        var textInput = document.getElementById('textInput');
+        textInput.addEventListener('keyup', function(event) {
+            alert('Key pressed: ' + event.key);
+        });
+
+        document.getElementById('exampleForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Form Submitted!');
+        });
+    </script>
+
+</body>
+</html>
