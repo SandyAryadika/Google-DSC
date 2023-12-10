@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Pseudo-selectors Example</title>
+    <style>
+      ul li:first-child {
+        font-weight: bold;
+      }
+
+      li:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      p:not(.exclude) {
+        text-decoration: underline;
+      }
+
+      p:before {
+        content: ">> ";
+      }
+
+      p:after {
+        content: " <<";
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">Hover over me</a>
+    <ul>
+      <li>First Item</li>
+      <li>Second Item</li>
+      <li>Third Item</li>
+    </ul>
+    <p>This paragraph is underlined.</p>
+    <p class="exclude">This paragraph is excluded from underlining.</p>
+  </body>
+</html>

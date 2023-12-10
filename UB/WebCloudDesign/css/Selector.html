@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors Example</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      .highlight {
+        background-color: yellow;
+      }
+
+      #special {
+        font-weight: bold;
+      }
+
+      div p {
+        font-style: italic;
+      }
+
+      input[type="text"] {
+        border: 1px solid #ccc;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is a Heading</h1>
+    <p class="highlight">This paragraph has a class.</p>
+    <p id="special">This paragraph has an ID.</p>
+    <div>
+      <p>This is a paragraph inside a div.</p>
+    </div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Enter your username" />
+  </body>
+</html>
